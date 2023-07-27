@@ -1,0 +1,88 @@
+<p>assignment0507 works!</p>
+<!-- <div>
+    <form>
+        <input type="text" #name>
+        <button (click)="submit(name.value)" (click)="name.value=''">submit</button>
+    </form>
+</div><br>
+<div>
+    <input type="text" [value]="str">
+    <button (click)="str=''">remove</button>
+</div> -->
+
+
+<div  class=" row justify-content-center santosh">
+    <div class="col-md-6">
+    <h1>Student Registation Form</h1>
+    <form (ngSubmit)="OnSubmit()" [formGroup]="myformname">
+        <table >
+            <tr class="form-group">
+                <td >
+                    <label > StudeNtame</label>
+                    </td>
+                    <td><input type="text" class="form-control rounded-pill" id="StudeNtame" formControlName="StudeNtame" placeholder="Enter Full Name"></td>
+            </tr>
+            <tr class="form-group">
+                 <td><label >Email_id</label> </td>
+            <td><input type="email" class="form-control rounded-pill" id="email" formControlName="email" placeholder="abc123@gmail.com">
+                <small class="text-danger" *ngIf="!myformname.get('email').valid && myformname.get('email').touched">Enter Valid Email</small>
+            </td>
+        </tr>
+        <tr class="form-group">
+            
+            <td >
+                <label ></label>DOB:</td>
+            <td> <input type="text" class="form-control rounded-pill" id="DOB" formControlName="DOB" placeholder="dd/mm/yy"></td>
+        </tr>
+        <tr class="form-group">
+            <td><label >MobileNo</label></td>
+            <td><input type="number" class="form-control rounded-pill"  id="MobileNo" formControlName="MobileNo" placeholder="1234567890"></td>
+        </tr>
+        <tr class="form-group">
+            <td> <label >Parsentage</label></td>
+            <td><input type="number"class="form-control rounded-pill"  id="Parsentage" formControlName="Parsentage"></td>
+        </tr>
+        <tr>
+            <td ><label class="form-check-label"> Select Course</label></td>
+            <select class="form-control rounded-pill" id="Course"  formControlName="Course">
+                <option value="defolt">select Cource</option>
+                <option value="BCS">BCS</option>
+                <option value="MCA">MCA</option>
+                <option value="BCA">BCA</option>
+                <option value="Bsc">Bsc</option>
+            </select>
+        </tr>
+        
+        <tr>          
+             <td><label class="form-check-label">Select Country</label></td>
+            <select class="form-select rounded-pill"  id="Country"  formControlName="Country">
+              <option selected>Select Country</option>
+              <option value="India">India</option>
+    
+            </select>
+        </tr>
+ 
+        <tr class="form-group">
+           <td> <label class="form-check-label" for="State">Select State</label> </td>
+            <select class="form-control  rounded-pill"  id="State"  formControlName="State">
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Gujrat">Gujrat</option>
+              <option value="Karnataka">Karnataka</option>
+              
+            </select>
+        </tr>
+            
+
+        <tr>
+            <td><button class=" btn btn-success rounded-pill"  [disabled]="!myformname.valid">reset</button></td>
+           <td> <button class= " btn btn-success rounded-pill"[disabled]="!myformname.valid" >submit</button></td>
+
+           
+        </tr>
+        </table>
+        
+        
+           </form>
+           
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<p>ngswitch works!</p>
+<div class="container">
+    <div class="col-md-4">
+       <select class="form-control" (change)="getProductValue($event)">
+        <option value="Default">Select Product</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="TV">TV</option>
+        <option value="Washing Machine">Washing Machine</option>
+
+       </select>
+    </div>
+
+    <div class="col-md-12" [ngSwitch]="selectedProduct">
+    
+        <h2 class="text-succes" *ngSwitchDefault> Please select product</h2>
+        <h2 class="text-succes" *ngSwitchCase="'Laptop'"> Laptop</h2>
+            <h2 class="text-succes" *ngSwitchCase="'Mobile'"> Mobile</h2>
+            <h2 class="text-succes" *ngSwitchCase="'TV'"> TV</h2>
+                <h2 class="text-succes" *ngSwitchCase="'Washing Machine'"> Washing achine</h2>
+    
+    </div>
+    
+    </div>
+    
+

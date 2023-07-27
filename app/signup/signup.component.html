@@ -1,0 +1,37 @@
+<!-- <p>signup works!</p> -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 rounded shadow py-4">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Signup Form</h1>
+                   
+                </div>
+                <form (ngSubmit)="OnSubmit()" [formGroup]="loginForm">
+                    <div class="form-group">
+                        
+                       <br>
+                       <div class="form-group">
+                       <label for="userName">UserName</label>
+                       <input type="userName" class="form-control" id="userName" formControlName="userName" placeholder=" userName">
+                       </div>
+                       
+                        <label for="email">Email *</label>
+                        <input type="email" class="form-control" id="email" formControlName="email"  placeholder=" Email Address"  >
+                        <small class="text-danger" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">Please enter valid email</small>
+                       </div>
+                        <div class="form-group">
+                            <label for="email">Password</label>
+                            <input type="password" class="form-control" id="password" formControlName="password" placeholder=" Password">
+                            </div>
+                       <br>
+                       
+                        <button type="submit" class="btn btn-primary">Login</button>
+                       
+                        
+                </form>
+                <a routerLink="/login">Alredy have an account? login Here!!</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {border: 1px solid aqua;
+    box-shadow: 0 0 13px #1100ff21;
+}
+.santosh{
+    background-color: rgb(175, 126, 128);
+}

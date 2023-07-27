@@ -1,0 +1,31 @@
+<p>amol works!</p>
+<div>
+    <div>
+        {{title}}
+    </div>
+</div>
+ <div>
+    <div>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>name</th>
+                        <th>country</th>
+                        <th>state</th>
+                        <th>dist</th>
+                    </tr> 
+                </thead>               
+                 <tbody>
+                    <tr *ngFor="let sunil of address; ">
+                        <td>{{sunil.Id}}</td>
+                       <td>{{sunil.name}}</td>
+                        <td>{{sunil.country}}</td>
+                        <td>{{sunil.state}}</td>
+                        <td>{{sunil.dist}}</td>
+
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+ </div>

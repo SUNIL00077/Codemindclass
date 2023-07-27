@@ -1,0 +1,52 @@
+<p>reactive works!</p>
+<!-- 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left shadow py-5">
+            <form [formGroup]="myReactform" (ngSubmit)="OnSubmit()">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter username"> 
+                    <small class="text-danger" *ngIf="!myReactform.get('username').valid &&myReactform.get('username').touched"Ks>Please enter name</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control"id="email" formControlName="email" placeholder="Enter email">
+                    <small class="text-danger" *ngIf="!myReactform.get('email').valid &&myReactform.get('email').touched">Please enter Email</small>
+             </div>
+             <div class="form-group">
+           <button class="btn btn-success mt-2">Submit</button>
+             </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<p>reactive assignment works</p>
+
+<div class="container">
+<div class="row justify-content-center">
+    <div class="col-md-6 text-left shadow py-5">
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <div class="form-group">
+    <label>UserId:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="user" placeholder="enter userid" formControlName="user">
+    <span class="text-danger" *ngIf="user && user.invalid && user.touched">this is required</span>
+
+    <br><br>
+    
+        <label>Password:</label>&nbsp;
+    <input type="password" name="password" placeholder="enter password" formControlName="password">
+    <span class="text-danger" *ngIf="password && password.invalid && password.touched">this is required</span>
+
+    <br><br>
+    <button class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+</div>
+</form>
+</div>
+</div>  
+</div>
+
+
+
+

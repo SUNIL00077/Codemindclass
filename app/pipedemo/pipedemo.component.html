@@ -1,0 +1,20 @@
+<h2 style="text-align: center;"> pipedemo works!</h2>
+
+<div>
+    Todays date : {{presentDate | date: 'fullDate' | uppercase}}
+</div>
+
+<div>
+    My observable : {{myObservable | async}}
+</div>
+
+<div>
+    <h3>Currency pipe</h3>
+    <p>{{price | currency: 'INR'}}</p>
+    <p>{{price | currency: 'USD'}}</p>
+</div>
+
+<div>
+    <h3>Json Pipe</h3>
+    <p>{{jsonData | json}}</p>
+</div>

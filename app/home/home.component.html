@@ -1,0 +1,10 @@
+<p>Login</p>
+
+
+
+<input type="text" #username> <br>
+<input type="password" #pass>
+
+<button (click)="login(username.value, pass.value)">Login</button>
+<br>
+<span>{{msg}}</span>

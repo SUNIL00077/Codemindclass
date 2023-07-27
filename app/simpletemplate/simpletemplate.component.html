@@ -1,0 +1,50 @@
+<p>Simple Template</p>
+
+<div style="text-align: center;">
+    Template  Driven Form :
+</div>
+<div class="container">
+    
+    <form #myForm="ngForm" (ngSubmit)="OnSubmit(myForm)">
+        <div class="container" ngModelGroup="userDetail" #userDetail="ngModelGroup">
+        
+          <div class="form-group">
+         <label for="username">username</label> 
+     <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" [(ngModel)]="username" required>
+     <small  *ngIf="username">user name is {{username}}</small>   
+    </div>
+        <div class="form-group">
+        </div>
+            <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" email name="email" placeholder="enter email address" ngModel required #email="ngModel">
+    <small class="text-danger" *ngIf="!email.valid && email.touched">Enter valid email</small>
+            </div>
+            <small *ngIf="!userDetail.valid && userDetail.touched">Please enter valid details</small>
+         <div class="form-group">
+     <label for="course">course</label>      
+        <select class="form-control" id="course" name="course" [ngModel]="defaultValue" required>
+            <option value="Angular">Angular</option>
+            <option value="HTML5">HTML5</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+     </div>
+     <div class="form-group">
+        <div *ngFor="let gender of genders" class="custom-control custom-radio">
+            <input type="radio" name="gender" id="{{gender.id}}" value="{{gender.value}}" class="custom-control-input" [ngModel]="defaultGender">
+            <label class="custom-control-label" for={{gender.id}}>{{gender.value}}</label>
+        </div>
+     </div>
+     <div>
+          <button type="submit" class="btn btn-success margin-top10" [disabled]="!myForm.valid">Submit</button>
+            </div>
+        <div class="row justify-content-center mt-2" *ngIf="submitted">
+            <div class="col-md-6 rounded py-4">
+                <h2>Form Data</h2>
+                <p>Username:<strong>{{formData.username}}</strong></p>
+                <p>Email:<strong>{{formData.email}}</strong></p>
+                <p>Course:<strong>{{formData.course}}</strong></p>
+                <p>Gender:<strong>{{formData.gender}}</strong></p>
+            </div>
+        </div>
+             </form>
+     </div>

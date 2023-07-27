@@ -1,0 +1,32 @@
+<p>addremovearray works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" name="" class="form control" placeholder="username" #uname>
+        </div>
+       <div class="col-md-3">
+        <button class="btn btn-success" (click)="OnCreateUser(uname)">Create user</button>
+       </div> 
+       <!-- <div class="col-md-3">
+        <button class="btn btn-danger" (click)="RemoveUser()">Remove</button>
+       </div> -->
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Username</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let uname of users;index as i">
+                        <td>{{uname.name}}</td>
+                        <td><button class="btn btn-danger" (click)="RemoveItem(i)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

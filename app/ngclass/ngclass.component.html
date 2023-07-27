@@ -1,0 +1,14 @@
+<p>ngclass works!</p>
+<h4>NG Class</h4>
+
+<ul *ngFor="let person of people">
+     
+
+    <li [ngClass]="{
+         'text-success': person.country === 'UK',
+         'text-primary': person.country === 'USA',
+         'text-danger': person.country === 'HK'
+    }">
+ {{person.name}} {{person.country}}
+</li>
+</ul>
